@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supermercado Hilarius</title>
+<link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+<link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+ <header>
+    <nav>
+      <a href="/Principal.html">Inicio</a>
+      <a href="https://www.facebook.com/profile.php?id=100089400880849&mibextid=ZbWKwL">Contacto</a>
+    </nav>
+    <section class="textos-header">
+      <h1>Todos los Productos a tu alcance</h1>
+      <h2>Tu destino para compras divertidas y asequibles</h2>
+    </section>
+      <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C183.68,-3.44 336.05,131.75 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg></div>
+  </header>
+    <div class="texto-info">
+      <h1>Supermercado Hilarius</h1>
+    </div>
+
+  <Section class="sect-container">
+    <aside>
+      <div class="promocion">
+        <h3>¡Oferta Especial!</h3>
+        <p>Lleva 6 pack gratis.</p>
+        <img src="/img/B1.jpg" alt="">
+      </div>
+      <div class="promocion">
+        <h3>¡Descuentazo!</h3>
+        <p>Compra tu yogur 30% hasta 70% de descuento.</p>
+        <img src="/img/B2.jpg" alt="">
+      </div>
+      <div class="promocion">
+        <h3>¡Combina tu mejor cafe!</h3>
+        <p>Compra tu cafe y llevate gratis tu coffemate</p>
+        <img src="/img/B4.jpg" alt="">
+      </div>
+    </aside>
+      <div class="productos-container">
+        <div class="producto">
+          <img src="/img/p1.webp" alt="Producto 1">
+            <h2>Azucar</h2>
+              <p>Azucar de 5lb.</p>
+              <p>Precio: Q20.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Azucar', 20.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p2.jpg" alt="Producto 2">
+          <h2>Arroz</h2>
+            <p>Arroz Gallo dorado.</p>
+            <p>Precio: Q7.5</p>
+          <button class="boton" onclick="agregarAlCarrito('Arroz', 7.50)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p3.webp" alt="Producto 3">
+          <h2>Frijo</h2>
+            <p>Frijol negro de 2.5lb.</p>
+            <p>Precio: Q8.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Frijo', 8.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p4.png" alt="Producto 4">
+          <h2>Aceite Ideal</h2>
+            <p>Aceite de 1000ml.</p>
+            <p>Precio: Q20.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Aceite Ideal', 20.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p5.webp" alt="Producto 5">
+          <h2>Avena Mosh</h2>
+            <p>Mosh de 300g.</p>
+            <p>Precio: Q11.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Avena Mosh', 11.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p6.webp" alt="Producto 6">
+          <h2>Corn Flakes</h2>
+            <p>Ceral origina 300g.</p>
+            <p>Precio: Q23.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Corn Flakes', 23.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p7.webp" alt="Producto 7">
+          <h2>Dos Pinos</h2>
+            <p>Leche dos pinos 1lt</p>
+            <p>Precio: Q16.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Dos Pinos', 16.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p8.webp" alt="Producto 8">
+          <h2>Incaparina</h2>
+            <p>Incaparina de 500g.</p>
+            <p>Precio: Q11.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Incaparina', 11.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p9.webp" alt="Producto 9">
+          <h2>Sopa Laky men</h2>
+            <p>Sopa instantanea laky men</p>
+            <p>Precio: Q5.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Laky men', 5.00)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/img/p10.webp" alt="Producto 10">
+          <h2>Salsa Campero</h2>
+            <p>Salsa de tomate campero.</p>
+            <p>Precio: Q12.00</p>
+          <button class="boton" onclick="agregarAlCarrito('Salsa Campero', 12.00)">Agregar al Carrito</button>
+        </div>
+      </div>
+  
+    <div class="carrito-container">
+      <h2>Carrito de Compra</h2>
+        <ul id="carrito-lista"></ul>
+          <p>Total: <span id="total">0.00</span></p>
+      <button class="boton" onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+</Section>
+
+<!--Funcion-->
+<script>
+    let carrito = [];
+    let total = 0;
+          
+  function agregarAlCarrito(producto, precio) {
+    carrito.push({ producto, precio });
+    total += precio;
+      actualizarCarrito();
+    }
+          
+  function actualizarCarrito() {
+    const carritoLista = document.getElementById('carrito-lista');
+    const totalSpan = document.getElementById('total');
+            
+      carritoLista.innerHTML = '';
+      carrito.forEach(item => {
+        const li = document.createElement('li');
+          li.textContent = `${item.producto} - $${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+      });
+            
+          totalSpan.textContent = total.toFixed(2);
+  }
+          
+  function vaciarCarrito() {
+      carrito = [];
+      total = 0;
+        actualizarCarrito();
+  }
+</script>
+</body>
+</html>
